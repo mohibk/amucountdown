@@ -35,21 +35,23 @@ body * {
 }
 
 h1 {
-  font-size: 50px;
-  margin: -80px 0 20px 10px;
+  font-size: 1.5rem;
+  margin: 10px 0 20px 10px;
+  /* margin-top: 10px; */
   color: bisque;
 }
 h2 {
-  font-size: 50px;
+  font-size: 2.5rem;
   margin: -20px 10px -60px 10px;
   color: bisque;
 
 }
 
 p.timer {
-  font-size: 60px;
+  font-size: 3rem;
   font-family: cursive;
   color: aqua;
+  margin-top: 4rem;
   margin-bottom: 10px;
 }
 
@@ -64,6 +66,7 @@ p.timer {
   align-items: center;
   justify-content: center;
   margin: 15px;
+  margin-top: 2rem;
 }
 .time h2 {
   margin: 0 0 5px;
@@ -84,13 +87,17 @@ p.timer {
   transform: translateX(-50%); */
 }
 
+p.tym {
+  font-size: 1.25rem;
+  margin-top: 1.5rem;
+}
 p.wish {
   font-size: 1.5rem;
-  margin-top: 40px;
+  margin-top: 6rem;
   margin-bottom: -25px;
 }
 
 h3 {
-  font-size: 2.5rem;
+  font-size: 2.25rem;
   color: #34b4eb;
 }
