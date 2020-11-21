@@ -6,7 +6,7 @@ const countdown = document.getElementById('countdown');
 const year = document.getElementById('year')
 const loading = document.getElementById('loading')
 
-const examDate = new Date('November 21 2020 09:00:00');
+const examDate = new Date('November 22 2020 10:00:00');
 
 const updateCountdown = () => {
 
