@@ -18,10 +18,10 @@ const updateCountdown = () => {
   const s = Math.floor(diff / 1000) % 60;
   
 
-  days.innerText = d;
-  hours.innerText = h;
-  minutes.innerText = m;
-  seconds.innerText = s;
+  days.innerText = d < 10 ? '0' + d : d;
+  hours.innerText = h < 10 ? '0' + h : h;
+  minutes.innerText = m < 10 ? '0' + m : m;
+  seconds.innerText = s < 10 ? '0' + s : s;
 }
 
 //Show spinner before countdown
