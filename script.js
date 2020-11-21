@@ -9,19 +9,19 @@ const loading = document.getElementById('loading')
 const examDate = new Date('November 22 2020 10:00:00');
 
 const updateCountdown = () => {
-
-  const currentTime = new Date().getTime();
+  const currentTime = new Date();
   const diff = examDate - currentTime;
 
-  const d = Math.round(diff / 1000 / 60 / 60 / 24);
-  const h = Math.round(diff / 1000 / 60 / 60) % 24;
-  const m = Math.round(diff / 1000 / 60) % 60;
-  const s = Math.round(diff / 1000) % 60;
+  const d = Math.floor(diff / 1000 / 60 / 60 / 24);
+  const h = Math.floor(diff / 1000 / 60 / 60) % 24;
+  const m = Math.floor(diff / 1000 / 60) % 60;
+  const s = Math.floor(diff / 1000) % 60;
+  
 
   days.innerText = d;
-  hours.innerText = h < 10 ? '0' + h : h;
-  minutes.innerText = m < 10 ? '0' + m : m;
-  seconds.innerText = s < 10 ? '0' + s : s;
+  hours.innerText = h;
+  minutes.innerText = m;
+  seconds.innerText = s;
 }
 
 //Show spinner before countdown
@@ -32,4 +32,3 @@ setTimeout(() => {
 
 // Run counter every second
 setInterval(updateCountdown, 1000)
-
