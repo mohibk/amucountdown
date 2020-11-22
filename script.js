@@ -6,11 +6,12 @@ const countdown = document.getElementById('countdown');
 const year = document.getElementById('year')
 const loading = document.getElementById('loading')
 
-const examDate = new Date('November 22 2020 10:00:00');
+const examDate = new Date('November 22 2020 10:00:00').getTime();
 
-const updateCountdown = () => {
-  const currentTime = new Date();
-  const diff = examDate - currentTime;
+
+const updateCountdown = () => { 
+  const currentTime = new Date().getTime();  
+  const diff = examDate - currentTime; 
 
   const d = Math.floor(diff / 1000 / 60 / 60 / 24);
   const h = Math.floor(diff / 1000 / 60 / 60) % 24;
@@ -18,17 +19,17 @@ const updateCountdown = () => {
   const s = Math.floor(diff / 1000) % 60;
   
 
-  days.innerText = d < 10 ? '0' + d : d;
-  hours.innerText = h < 10 ? '0' + h : h;
-  minutes.innerText = m < 10 ? '0' + m : m;
-  seconds.innerText = s < 10 ? '0' + s : s;
+  days.innerText = '00';
+  hours.innerText = '00';
+  minutes.innerText = '00';
+  seconds.innerText = '00';
 }
 
 //Show spinner before countdown
 setTimeout(() => {
   loading.remove()
-  countdown.style.display = 'flex';  
+  countdown.style.display = 'flex';
 }, 1000);
 
 // Run counter every second
-setInterval(updateCountdown, 1000)
+setInterval(updateCountdown, 1000);
